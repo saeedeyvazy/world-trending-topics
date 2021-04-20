@@ -1,4 +1,14 @@
-import { SETTING, VIDEO, HOME, EVENT, LIKE, FRIEND, SAVE, TV } from './images'
+import {
+	SETTING,
+	VIDEO,
+	HOME,
+	EVENT,
+	LIKE,
+	FRIEND,
+	SAVE,
+	TV,
+	LOGO,
+} from './images'
 const IMAGES = {
 	SETTING,
 	VIDEO,
@@ -8,6 +18,7 @@ const IMAGES = {
 	FRIEND,
 	SAVE,
 	TV,
+	LOGO,
 }
 
 export { IMAGES }

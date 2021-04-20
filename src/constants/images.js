@@ -6,5 +6,6 @@ import LIKE from '../assets/images/icons8-heart-100.png'
 import FRIEND from '../assets/images/icons8-hang-10-100.png'
 import SAVE from '../assets/images/icons8-save-100.png'
 import TV from '../assets/images/icons8-retro-tv-150.png'
+import LOGO from '../assets/images/logo.png'
 
-export { SETTING, HOME, VIDEO, EVENT, LIKE, FRIEND, SAVE, TV }
+export { SETTING, HOME, VIDEO, EVENT, LIKE, FRIEND, SAVE, TV, LOGO }
