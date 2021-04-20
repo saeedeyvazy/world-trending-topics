@@ -2,6 +2,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
+import Profile from '../../components/Profile'
 import Sidebar from '../../components/Sidebar'
 import { IMAGES } from '../../constants'
 
@@ -51,12 +52,6 @@ const ContentContainer = styled.div`
 	display: flex;
 	height: 100%;
 	flex: 1;
-`
-const Profile = styled.div`
-	display: flex;
-	flex: 1;
-	background-color: white;
-	border-left: 2px solid #a9b2e52b;
 `
 
 function HomePage() {
