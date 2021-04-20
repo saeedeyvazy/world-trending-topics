@@ -8,7 +8,7 @@ import { IMAGES } from '../../constants'
 const Content = styled.div`
 	display: flex;
 	flex-direction: column;
-	flex: 1;
+	flex: 3;
 	height: 100%;
 	/* background-color: white; */
 `
@@ -37,7 +37,7 @@ const SearchInputContainer = styled.div`
 	align-items: center;
 	height: 40px;
 	padding: 0 10px;
-	border-radius: 5px;
+	border-radius: 8px;
 `
 
 const SearchInput = styled.input`
@@ -47,22 +47,36 @@ const SearchInput = styled.input`
 	color: #a9b2e5ff;
 `
 
+const ContentContainer = styled.div`
+	display: flex;
+	height: 100%;
+	flex: 1;
+`
+const Profile = styled.div`
+	display: flex;
+	flex: 1;
+	background-color: white;
+	border-left: 2px solid #a9b2e52b;
+`
+
 function HomePage() {
 	return (
 		<>
 			<Sidebar />
-			<Content>
-				<HeaderContainer>
-					<LogoContainer>
-						<img src={IMAGES.LOGO} alt='world-trend-logo' />
-					</LogoContainer>
-					<SearchInputContainer>
-						<FontAwesomeIcon color='#a9b2e57d' icon={faSearch} size='1x' />
-						<SearchInput placeholder='Search' />
-					</SearchInputContainer>
-				</HeaderContainer>
-			</Content>
-			{/* <Profile /> */}
+			<ContentContainer>
+				<Content>
+					<HeaderContainer>
+						<LogoContainer>
+							<img src={IMAGES.LOGO} alt='world-trend-logo' />
+						</LogoContainer>
+						<SearchInputContainer>
+							<FontAwesomeIcon color='#a9b2e57d' icon={faSearch} size='1x' />
+							<SearchInput placeholder='Search' />
+						</SearchInputContainer>
+					</HeaderContainer>
+				</Content>
+				<Profile />
+			</ContentContainer>
 		</>
 	)
 }
