@@ -1,11 +1,10 @@
 import React from 'react'
 import './app.css'
-import Sidebar from './components/Sidebar'
-
+import HomePage from './pages/HomePage'
 function App() {
 	return (
 		<div className='app'>
-			<Sidebar />
+			<HomePage />
 		</div>
 	)
 }
