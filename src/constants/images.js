@@ -7,5 +7,17 @@ import FRIEND from '../assets/images/icons8-hang-10-100.png'
 import SAVE from '../assets/images/icons8-save-100.png'
 import TV from '../assets/images/icons8-retro-tv-150.png'
 import LOGO from '../assets/images/logo.png'
+import PROFILE_IMAGE from '../assets/images/profile-image.JPG'
 
-export { SETTING, HOME, VIDEO, EVENT, LIKE, FRIEND, SAVE, TV, LOGO }
+export {
+	SETTING,
+	HOME,
+	VIDEO,
+	EVENT,
+	LIKE,
+	FRIEND,
+	SAVE,
+	TV,
+	LOGO,
+	PROFILE_IMAGE,
+}

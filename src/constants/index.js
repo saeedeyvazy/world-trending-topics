@@ -8,6 +8,7 @@ import {
 	SAVE,
 	TV,
 	LOGO,
+	PROFILE_IMAGE,
 } from './images'
 const IMAGES = {
 	SETTING,
@@ -19,6 +20,7 @@ const IMAGES = {
 	SAVE,
 	TV,
 	LOGO,
+	PROFILE_IMAGE,
 }
 
 export { IMAGES }
