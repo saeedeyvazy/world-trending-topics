@@ -51,6 +51,18 @@ const AvatarContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 `
+
+const CircleAvatar = styled.div`
+	overflow: hidden;
+	border-radius: 50px;
+	width: 100%;
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+`
+
 function Profile() {
 	return (
 		<ProfileContainer>
@@ -60,21 +72,9 @@ function Profile() {
 			<ProfileContent>
 				<ProfileInfo>
 					<AvatarContainer>
-						<div
-							style={{
-								overflow: 'hidden',
-								borderRadius: '50px',
-								overflow: 'hidden',
-								width: '100%',
-								height: '100%',
-							}}
-						>
-							<img
-								style={{ width: '100%', height: '100%' }}
-								src={IMAGES.PROFILE_IMAGE}
-								alt='profile'
-							/>
-						</div>
+						<CircleAvatar>
+							<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+						</CircleAvatar>
 					</AvatarContainer>
 				</ProfileInfo>
 			</ProfileContent>
