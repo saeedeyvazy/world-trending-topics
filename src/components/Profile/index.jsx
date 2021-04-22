@@ -235,14 +235,17 @@ function Profile() {
 					<StorieContainer>
 						<h3>Your Stories</h3>
 						<StorieAvatarContainer>
-							{storieList.length &&
+							{storieList.length ? (
 								storieList.map((item) => (
 									<div style={{ padding: '5px' }}>
 										<StorieAvatar>
 											<img src={item.url} alt='storie' />
 										</StorieAvatar>
 									</div>
-								))}
+								))
+							) : (
+								<h2>Loading...</h2>
+							)}
 						</StorieAvatarContainer>
 						<div style={{ padding: '10px' }}>
 							<CreatePostButton>Create Post</CreatePostButton>
