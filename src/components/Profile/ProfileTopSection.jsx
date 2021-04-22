@@ -98,6 +98,7 @@ function ProfileTopSection() {
 					justifyContent: 'center',
 					alignItems: 'center',
 					flex: 2,
+					textAlign: 'center',
 				}}
 			>
 				<AvatarContainer>
