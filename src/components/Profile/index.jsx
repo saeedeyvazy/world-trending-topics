@@ -165,11 +165,15 @@ const CreatePostButton = styled.button`
 	border-radius: 5px;
 	cursor: pointer;
 	font-weight: 700;
+	transition: all 200ms ease-in-out;
 	background: linear-gradient(
 		90deg,
 		rgba(252, 70, 161, 1) 0%,
 		rgba(252, 169, 70, 1) 100%
-	); ;
+	);
+	&:hover {
+		opacity: 0.8;
+	}
 `
 
 function Profile() {
