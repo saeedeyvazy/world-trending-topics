@@ -78,35 +78,56 @@ const AvatarContainer = styled.div`
 
 function ProfileTopSection() {
 	return (
-		<>
-			{' '}
-			<AvatarContainer>
-				<CircleAvatar>
-					<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-				</CircleAvatar>
-			</AvatarContainer>
-			<ProfileName>Saeed Eyvazy</ProfileName>
-			<ProfileDesc>profile description</ProfileDesc>
-			<Marginer direction='vertical' margin={8} />
-			<EditButton>Edit</EditButton>
-			<Marginer direction='vertical' margin={20} />
-			<ProfileStateContainer>
+		<div style={{ display: 'flex', flex: 1, width: '100%', height: '120px' }}>
+			<div
+				style={{
+					display: 'flex',
+					flex: 1,
+					alignItems: 'flex-end',
+				}}
+			>
 				<ProfileState>
 					<h3>98</h3>
 					<h4>Posts</h4>
 				</ProfileState>
-				<h3>.</h3>
+			</div>
+			<div
+				style={{
+					flexDirection: 'column',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					flex: 2,
+				}}
+			>
+				<AvatarContainer>
+					<CircleAvatar>
+						<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+					</CircleAvatar>
+				</AvatarContainer>
+				<ProfileName>Saeed Eyvazy</ProfileName>
+				<ProfileDesc>profile description</ProfileDesc>
+				<Marginer direction='vertical' margin={8} />
+				<EditButton>Edit</EditButton>
+				<Marginer direction='vertical' margin={20} />
 				<ProfileState>
 					<h3>3.5k</h3>
 					<h4>Followers</h4>
 				</ProfileState>
-				<h3>.</h3>
+			</div>
+			<div
+				style={{
+					display: 'flex',
+					flex: 1,
+					alignItems: 'flex-end',
+				}}
+			>
 				<ProfileState>
 					<h3>900</h3>
 					<h4>Followings</h4>
 				</ProfileState>
-			</ProfileStateContainer>
-		</>
+			</div>
+		</div>
 	)
 }
 
