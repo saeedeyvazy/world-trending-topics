@@ -1,0 +1,9 @@
+{
+	"stories": [
+		{ "url": "http://localhost:9000/garden.jpg" },
+		{ "url": "http://localhost:9000/car.jpg" },
+		{ "url": "http://localhost:9000/flowers.jpg" },
+		{ "url": "http://localhost:9000/grass.jpg" },
+		{ "url": "http://localhost:9000/office.jpg" }
+	]
+}

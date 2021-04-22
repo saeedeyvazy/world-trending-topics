@@ -1,6 +1,7 @@
 import { faBell } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { IMAGES } from '../../constants'
 import { Marginer } from '../Marginer'
@@ -172,6 +173,18 @@ const CreatePostButton = styled.button`
 `
 
 function Profile() {
+	const [storieList, setStorieList] = useState([])
+
+	useEffect(() => {
+		const getStorieList = async () => {
+			const response = await axios.get('http://localhost:9000/stories')
+			setStorieList(response.data)
+			console.log(response.data)
+		}
+
+		getStorieList()
+	}, [])
+
 	return (
 		<ProfileContainer>
 			<NotifContainer>
@@ -218,36 +231,14 @@ function Profile() {
 					<StorieContainer>
 						<h3>Your Stories</h3>
 						<StorieAvatarContainer>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
-							<div style={{ padding: '5px' }}>
-								<StorieAvatar>
-									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
-								</StorieAvatar>
-							</div>
+							{storieList.length &&
+								storieList.map((item) => (
+									<div style={{ padding: '5px' }}>
+										<StorieAvatar>
+											<img src={item.url} alt='storie' />
+										</StorieAvatar>
+									</div>
+								))}
 						</StorieAvatarContainer>
 						<div style={{ padding: '10px' }}>
 							<CreatePostButton>Create Post</CreatePostButton>
