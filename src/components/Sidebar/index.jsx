@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { IMAGES } from '../../constants'
 const SidebarContainer = styled.div`
 	width: 70px;
-	height: 100%;
+	/* height: 100%; */
 	background-color: white;
 	border-right: 2px solid #a9b2e52b;
 	display: flex;

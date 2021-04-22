@@ -139,6 +139,38 @@ const ProfileDescContainer = styled.div`
 		padding: 10px;
 	}
 `
+
+const StorieAvatar = styled.div`
+	overflow: hidden;
+	border-radius: 50px;
+	width: 60px;
+	height: 60px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+`
+const StorieAvatarContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+`
+
+const CreatePostButton = styled.button`
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 700;
+	background: linear-gradient(
+		90deg,
+		rgba(252, 70, 161, 1) 0%,
+		rgba(252, 169, 70, 1) 100%
+	); ;
+`
+
 function Profile() {
 	return (
 		<ProfileContainer>
@@ -185,6 +217,41 @@ function Profile() {
 					</ProfileDescContainer>
 					<StorieContainer>
 						<h3>Your Stories</h3>
+						<StorieAvatarContainer>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+							<div style={{ padding: '5px' }}>
+								<StorieAvatar>
+									<img src={IMAGES.PROFILE_IMAGE} alt='profile' />
+								</StorieAvatar>
+							</div>
+						</StorieAvatarContainer>
+						<div style={{ padding: '10px' }}>
+							<CreatePostButton>Create Post</CreatePostButton>
+						</div>
 					</StorieContainer>
 				</ProfileInfo>
 			</ProfileContent>
