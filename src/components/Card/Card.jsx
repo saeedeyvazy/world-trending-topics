@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
+import { Marginer } from '../Marginer'
 
 const CardContainer = styled.div`
 	min-width: 300px;
@@ -57,6 +58,13 @@ const LeftHeader = styled.div`
 	align-items: center;
 	flex: 1;
 `
+const TweetImage = styled.img`
+	width: 100%;
+	border-radius: 10px;
+	height: 150px;
+	object-fit: cover;
+`
+
 function Card({ url, description, creator, location }) {
 	return (
 		<CardContainer>
@@ -72,6 +80,8 @@ function Card({ url, description, creator, location }) {
 				</LeftHeader>
 				<FontAwesomeIcon icon={faEllipsisH} color='#a9b2e5ff' size='sm' />
 			</HeaderContainer>
+			<Marginer direction='vertical' margin={20} />
+			<TweetImage src={url}></TweetImage>
 		</CardContainer>
 	)
 }
