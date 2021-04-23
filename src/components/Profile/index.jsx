@@ -8,7 +8,7 @@ import StorieSection from './StorieSection'
 
 const ProfileContainer = styled.div`
 	display: flex;
-	flex: 1;
+	flex: 0.8;
 	background-color: white;
 	border-left: 2px solid #a9b2e52b;
 	flex-direction: column;

@@ -1,7 +1,12 @@
+import { faTelegram } from '@fortawesome/free-brands-svg-icons'
 import {
+	faBookmark,
+	faComment,
 	faDotCircle,
 	faEllipsisH,
+	faHeart,
 	faMortarPestle,
+	faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
@@ -65,6 +70,17 @@ const TweetImage = styled.img`
 	object-fit: cover;
 `
 
+const ActionContainer = styled.div`
+	display: flex;
+	align-items: center;
+`
+const LeftActionContainer = styled.div`
+	display: flex;
+	flex: 1;
+	svg {
+		padding: 0 5px;
+	}
+`
 function Card({ url, description, creator, location }) {
 	return (
 		<CardContainer>
@@ -82,6 +98,16 @@ function Card({ url, description, creator, location }) {
 			</HeaderContainer>
 			<Marginer direction='vertical' margin={20} />
 			<TweetImage src={url}></TweetImage>
+			<Marginer direction='vertical' margin={20} />
+			<ActionContainer>
+				<LeftActionContainer>
+					<FontAwesomeIcon icon={faHeart} color='red' />
+					<FontAwesomeIcon icon={faComment} color='#a9b2e5ff' />
+					<FontAwesomeIcon icon={faPaperPlane} color='#a9b2e5ff' />
+				</LeftActionContainer>
+				<FontAwesomeIcon icon={faBookmark} color='#a9b2e5ff' />
+			</ActionContainer>
+			{/* <label>This is the version of our </label> */}
 		</CardContainer>
 	)
 }

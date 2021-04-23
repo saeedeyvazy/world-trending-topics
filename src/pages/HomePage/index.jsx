@@ -23,7 +23,7 @@ const TweetsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1;
-	padding: 5px;
+	padding: 20px 15px;
 `
 
 function HomePage() {
