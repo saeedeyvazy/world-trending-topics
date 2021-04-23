@@ -23,7 +23,10 @@ const TweetsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1;
-	padding: 20px 15px;
+	padding: 20px 0;
+	overflow: scroll;
+	scrollbar-color: #a9b2e57d transparent;
+	scrollbar-width: thin;
 `
 
 function HomePage() {

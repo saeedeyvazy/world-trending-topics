@@ -1,11 +1,8 @@
-import { faTelegram } from '@fortawesome/free-brands-svg-icons'
 import {
 	faBookmark,
 	faComment,
-	faDotCircle,
 	faEllipsisH,
 	faHeart,
-	faMortarPestle,
 	faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,10 +15,10 @@ const CardContainer = styled.div`
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	padding: 5px;
+	padding: 10px;
 	background-color: white;
-	border-radius: 10px;
-	margin-right: 10px;
+	border-radius: 20px;
+	margin: 5px 5px;
 `
 const HeaderContainer = styled.div`
 	display: flex;
@@ -81,6 +78,24 @@ const LeftActionContainer = styled.div`
 		padding: 0 5px;
 	}
 `
+const LikedPeople = styled.div`
+	display: flex;
+	font-size: 14px;
+	h4 {
+		font-weight: 700;
+	}
+`
+const Description = styled.span`
+	font-size: 14px;
+	font-weight: 500;
+`
+const CreateDate = styled.h4`
+	color: gray;
+	font-weight: 400;
+	font-size: 12px;
+	padding: 5px 0;
+`
+
 function Card({ url, description, creator, location }) {
 	return (
 		<CardContainer>
@@ -107,7 +122,14 @@ function Card({ url, description, creator, location }) {
 				</LeftActionContainer>
 				<FontAwesomeIcon icon={faBookmark} color='#a9b2e5ff' />
 			</ActionContainer>
-			{/* <label>This is the version of our </label> */}
+			<Marginer direction='vertical' margin={20} />
+			<LikedPeople>
+				<span>Liked by &nbsp;</span>
+				<h4> mahya12,&nbsp;&nbsp;and 24 Other people</h4>
+			</LikedPeople>
+			<Marginer direction='vertical' margin={10} />
+			<Description>{description}</Description>
+			<CreateDate>Wed 16, January 2021</CreateDate>
 		</CardContainer>
 	)
 }
