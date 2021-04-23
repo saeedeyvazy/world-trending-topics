@@ -1,9 +1,34 @@
 {
 	"stories": [
-		{ "url": "http://localhost:9000/garden.jpg" },
-		{ "url": "http://localhost:9000/car.jpg" },
-		{ "url": "http://localhost:9000/flowers.jpg" },
-		{ "url": "http://localhost:9000/grass.jpg" },
-		{ "url": "http://localhost:9000/office.jpg" }
+		{
+			"url": "http://localhost:9000/garden.jpg",
+			"description": "",
+			"creator": "Saeed Eyvazy",
+			"location": "New yourk"
+		},
+		{
+			"url": "http://localhost:9000/car.jpg",
+			"description": "",
+			"creator": "Saeed Eyvazy",
+			"location": "New yourk"
+		},
+		{
+			"url": "http://localhost:9000/flowers.jpg",
+			"description": "",
+			"creator": "Saeed Eyvazy",
+			"location": "New yourk"
+		},
+		{
+			"url": "http://localhost:9000/grass.jpg",
+			"description": "",
+			"creator": "Saeed Eyvazy",
+			"location": "New yourk"
+		},
+		{
+			"url": "http://localhost:9000/office.jpg",
+			"description": "",
+			"creator": "Saeed Eyvazy",
+			"location": "New yourk"
+		}
 	]
 }

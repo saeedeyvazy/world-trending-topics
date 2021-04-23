@@ -1,5 +1,7 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import Card from '../../components/Card/Card'
 import Profile from '../../components/Profile'
 import Sidebar from '../../components/Sidebar'
 import TopHeader from '../../components/TopHeader'
@@ -21,16 +23,33 @@ const TweetsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1;
+	padding: 5px;
 `
 
 function HomePage() {
+	const [tweetList, setTweetList] = useState([])
+
+	useEffect(() => {
+		const getTweetList = async () => {
+			const response = axios.get('http://localhost:9000/stories')
+			setTweetList((await response).data)
+		}
+		getTweetList()
+	}, [])
+
 	return (
 		<>
 			<Sidebar />
 			<ContentContainer>
 				<Content>
 					<TopHeader />
-					<TweetsContainer></TweetsContainer>
+					<TweetsContainer>
+						{tweetList.length ? (
+							tweetList.map((tweet, idx) => <Card key={idx} {...tweet} />)
+						) : (
+							<h3>Loading Tweets...</h3>
+						)}
+					</TweetsContainer>
 				</Content>
 				<Profile />
 			</ContentContainer>
