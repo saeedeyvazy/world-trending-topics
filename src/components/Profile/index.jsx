@@ -1,7 +1,6 @@
 import { faBell } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Marginer } from '../Marginer'
 import ProfileTopSection from './ProfileTopSection'

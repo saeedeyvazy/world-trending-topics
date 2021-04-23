@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
 	background-color: white;
 	justify-content: space-between;
 	align-items: center;
-	height: auto;
+	min-height: fit-content;
 	flex-wrap: wrap;
 	padding: 0 10px;
 `
