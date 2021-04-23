@@ -8,11 +8,12 @@ import StorieSection from './StorieSection'
 
 const ProfileContainer = styled.div`
 	display: flex;
-	flex: 0.8;
+	flex: 1;
 	background-color: white;
 	border-left: 2px solid #a9b2e52b;
 	flex-direction: column;
 	align-items: center;
+	overflow-y: scroll;
 `
 const NotifContainer = styled.div`
 	height: 80px;

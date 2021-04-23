@@ -11,14 +11,14 @@ import styled from 'styled-components'
 import { Marginer } from '../Marginer'
 
 const CardContainer = styled.div`
-	min-width: 300px;
+	min-width: fit-content;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
 	background-color: white;
 	border-radius: 20px;
-	margin: 5px 5px;
+	margin: 5px 10px;
 `
 const HeaderContainer = styled.div`
 	display: flex;
