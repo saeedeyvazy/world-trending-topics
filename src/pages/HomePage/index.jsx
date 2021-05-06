@@ -34,7 +34,9 @@ function HomePage() {
 
 	useEffect(() => {
 		const getTweetList = async () => {
-			const response = axios.get('http://localhost:9000/stories')
+			const response = axios.get(
+				'https://my-json-server.typicode.com/saeedeyvazy/servycing-api/services'
+			)
 			setTweetList((await response).data)
 		}
 		getTweetList()

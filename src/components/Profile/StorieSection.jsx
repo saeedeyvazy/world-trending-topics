@@ -50,7 +50,9 @@ function StorieSection() {
 
 	useEffect(() => {
 		const getStorieList = async () => {
-			const response = await axios.get('http://localhost:9000/stories')
+			const response = await axios.get(
+				'https://my-json-server.typicode.com/saeedeyvazy/servycing-api/services'
+			)
 			setStorieList(response.data)
 			console.log(response.data)
 		}
